@@ -17,12 +17,12 @@ enum Type {
 	pdf @4;
 	interchange @5;
 	epub @6;
-	word_document @7;
+	wordDocument @7;
 	presentation @8;
 	spreadsheet @9;
 	html @10;
 	markdown @11;
-	plain_text @12;
+	plainText @12;
 	archive @13;
 	code @14;
 	comment @15;
@@ -33,7 +33,7 @@ struct Queue {
 	status @0 :Status;
 	attempts @1 :Int8;
 	payload @2 :Data;
-	queued_at @3 :Int64;
+	queuedAt @3 :Int64;
 }
 
 struct Collection  {
@@ -44,8 +44,8 @@ struct Collection  {
 
 struct Owner {
 	username @0 :Text;
-	first_name @1 :Text;
-	last_name @2 :Text;
+	firstName @1 :Text;
+	lastName @2 :Text;
 }
 
 struct Entry {
@@ -56,7 +56,7 @@ struct Entry {
 	type @4 :Type;
 	collection @5 :Collection;
 	owner @6 :Owner;
-	created_at @7 :Int64;
+	createdAt @7 :Int64;
 	queue @8 :Queue;
 
 	# file size in bytes (only present if type is not link)
