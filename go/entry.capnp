@@ -1,6 +1,6 @@
 # Code generated from shared schema. DO NOT EDIT.
 using Go = import "/go.capnp";
-@0xfc133b9c3cb7cae8;
+@0x9b2234ddf8830be2;
 $Go.package("schema");
 $Go.import("go.trulyao.dev/hubble/web/schema");
 
@@ -60,5 +60,5 @@ struct Entry {
 	owner @6 :Owner;
 	createdAt @7 :Int64;
 	queue @8 :Queue;
-	filesize_bytes @9 :Int64;
+	filesizeBytes @9 :Int64;
 }
