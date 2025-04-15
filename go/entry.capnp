@@ -64,3 +64,13 @@ struct Entry {
 	# In the case of a link, this is the URL, but in the case of a file, this is a pre-signed Minio URL to download the file.
 	url @10 :Text;
 }
+
+struct UpdateEntryRequest {
+	id @0 :Text;
+	name @1 :Text;
+	content @2 :Text;
+}
+
+struct ChunkResult {
+	chunks @0 :List(Text);
+}
