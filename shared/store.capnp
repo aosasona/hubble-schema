@@ -5,10 +5,32 @@ struct Error {
 	message @1 :Text;
 }
 
-interface Store {
-	get @0 (key :Text) -> (value :Text);
-	set @1 (key :Text, value :Text) -> (value :Text);
-	delete @2 (key :Text);
-	all @3 () -> (keys :List(Text));
-	clear @4 ();
+struct StoreGetRequest {
+	key @0 :Text;
+}
+
+struct StoreGetResponse {
+	value @0 :Text;
+	exists @1 :Bool;
+}
+
+struct StoreSetRequest {
+	key @0 :Text;
+	value @1 :Text;
+}
+
+struct StoreSetResponse {
+	value @0 :Text;
+}
+
+struct StoreDeleteRequest {
+	key @0 :Text;
+}
+
+struct StoreDeleteResponse {
+	key @0 :Text;
+}
+
+struct StoreAllResponse {
+	keys @0 :List(Text);
 }
