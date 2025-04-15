@@ -27,7 +27,8 @@ local function generate_go_schemas()
 			-- Read the ID on the third line and use that
 			local existing_id = output_content:match("^[^\n]*\n[^\n]*\n([^\n]*)")
 			if existing_id then
-				file_id = existing_id
+				-- remove training semicolon
+				file_id = existing_id:gsub("%s*;", "")
 			end
 		end
 
