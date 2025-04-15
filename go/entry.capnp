@@ -1,6 +1,6 @@
 # Code generated from shared schema. DO NOT EDIT.
 using Go = import "/go.capnp";
-@0x9b2234ddf8830be2;
+@0x89f9fd74f165e666;;;
 $Go.package("schema");
 $Go.import("go.trulyao.dev/hubble/web/schema");
 
@@ -61,4 +61,6 @@ struct Entry {
 	createdAt @7 :Int64;
 	queue @8 :Queue;
 	filesizeBytes @9 :Int64;
+	# In the case of a link, this is the URL, but in the case of a file, this is a pre-signed Minio URL to download the file.
+	url @10 :Text;
 }

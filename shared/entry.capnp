@@ -57,4 +57,6 @@ struct Entry {
 	createdAt @7 :Int64;
 	queue @8 :Queue;
 	filesizeBytes @9 :Int64;
+	# In the case of a link, this is the URL, but in the case of a file, this is a pre-signed Minio URL to download the file.
+	url @10 :Text;
 }
