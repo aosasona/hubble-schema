@@ -1,6 +1,6 @@
 # Code generated from shared schema. DO NOT EDIT.
 using Go = import "/go.capnp";
-@0xbed263d4e820ba43;
+@0x88c805479a741d75;
 $Go.package("schema");
 $Go.import("go.trulyao.dev/hubble/web/schema");
 
