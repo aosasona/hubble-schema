@@ -1,6 +1,6 @@
 # Code generated from shared schema. DO NOT EDIT.
 using Go = import "/go.capnp";
-@0xf91835cc9f7288b9;
+@0x993a1a30f8dd3ebe;
 $Go.package("schema");
 $Go.import("go.trulyao.dev/hubble/web/schema");
 
@@ -35,9 +35,7 @@ enum Type {
 
 struct Queue {
 	status @0 :Status;
-	attempts @1 :Int8;
-	payload @2 :Data;
-	queuedAt @3 :Int64;
+	queuedAt @1 :Int64;
 }
 
 struct Collection  {

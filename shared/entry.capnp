@@ -31,9 +31,7 @@ enum Type {
 
 struct Queue {
 	status @0 :Status;
-	attempts @1 :Int8;
-	payload @2 :Data;
-	queuedAt @3 :Int64;
+	queuedAt @1 :Int64;
 }
 
 struct Collection  {
