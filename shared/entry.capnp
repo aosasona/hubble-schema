@@ -56,5 +56,5 @@ struct Entry {
 	owner @6 :Owner;
 	createdAt @7 :Int64;
 	queue @8 :Queue;
-	filesize_bytes @9 :Int64;
+	filesizeBytes @9 :Int64;
 }
