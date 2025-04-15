@@ -12,8 +12,24 @@ local function generate_go_schemas()
 	local files = read_schema_files()
 	for _, file in ipairs(files) do
 		local path = "./shared/" .. file
+		local output_path = "./go/" .. file
+
 		-- Generate the capnp id using `capnp id` command and then trim the output
 		local file_id = io.popen("capnp id "):read("*a"):gsub("%s+", "")
+
+		-- Check if the output file already exists, if it does, we want to reuse the ID (on the third line)
+		local output_handle = io.open(output_path, "r")
+
+		if output_handle then
+			local output_content = output_handle:read("*a")
+			output_handle:close()
+
+			-- Read the ID on the third line and use that
+			local existing_id = output_content:match("^[^\n]*\n[^\n]*\n([^\n]*)")
+			if existing_id then
+				file_id = existing_id
+			end
+		end
 
 		local header = '# Code generated from shared schema. DO NOT EDIT.\nusing Go = import "/go.capnp";\n'
 			.. file_id
@@ -33,7 +49,6 @@ local function generate_go_schemas()
 
 		local new_schema = header .. content
 
-		local output_path = "./go/" .. file
 		local output_handle = io.open(output_path, "w")
 		if not output_handle then
 			print("Error: Could not open file " .. output_path)
