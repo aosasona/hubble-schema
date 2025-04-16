@@ -79,3 +79,7 @@ struct CreateChunkRequest {
 	content @3 :Text;
 	language @4 :Text;
 }
+
+struct CreateChunksRequest {
+	chunks @0 :List(CreateChunkRequest);
+}
