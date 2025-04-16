@@ -18,11 +18,11 @@ struct NetworkRequest {
 	method @0 :NetworkMethod;
 	url @1 :Text;
 	headers @2 :List(NetworkHeader);
-	body @3 :Text;
+	body @3 :Data;
 }
 
 struct NetworkResponse {
 	status @0 :Int32;
 	headers @1 :List(NetworkHeader);
-	body @2 :Text;
+	body @2 :Data;
 }
