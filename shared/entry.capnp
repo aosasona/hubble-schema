@@ -65,6 +65,7 @@ struct UpdateEntryRequest {
 	id @0 :Text;
 	name @1 :Text;
 	content @2 :Text;
+	checksum @3 :Text;
 }
 
 struct ChunkResult {
