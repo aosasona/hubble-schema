@@ -1,8 +1,8 @@
 @0xfdb92caa514d8128;
 
 enum NetworkMethod {
-  GET @0;
-  POST @1;
+  get @0;
+  post @1;
 }
 
 struct NetworkRequest {

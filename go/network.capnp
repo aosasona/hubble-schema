@@ -5,8 +5,8 @@ $Go.package("schema");
 $Go.import("go.trulyao.dev/hubble/web/schema");
 
 enum NetworkMethod {
-  GET @0;
-  POST @1;
+  get @0;
+  post @1;
 }
 
 struct NetworkRequest {
