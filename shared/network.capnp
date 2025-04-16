@@ -12,8 +12,13 @@ struct NetworkRequest {
 	body @3 :Text;
 }
 
+struct NetworkHeader {
+	key @0 :Text;
+	value @1 :List(Text);
+}
+
 struct NetworkResponse {
 	status @0 :Int32;
-	headers @1 :List(Text);
+	headers @1 :List(NetworkHeader);
 	body @2 :Text;
 }
