@@ -75,3 +75,11 @@ struct UpdateEntryRequest {
 struct ChunkResult {
 	chunks @0 :List(Text);
 }
+
+struct CreateChunkRequest {
+	entryId @0 :Text;
+	index @1 :Int32;
+	minimumVersion @2 :Int32;
+	content @3 :Text;
+	language @4 :Text;
+}
