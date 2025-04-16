@@ -5,16 +5,16 @@ enum NetworkMethod {
 	post @1;
 }
 
+struct NetworkHeader {
+	key @0 :Text;
+	value @1 :Text;
+}
+
 struct NetworkRequest {
 	method @0 :NetworkMethod;
 	url @1 :Text;
-	headers @2 :List(Text);
+	headers @2 :List(NetworkHeader);
 	body @3 :Text;
-}
-
-struct NetworkHeader {
-	key @0 :Text;
-	value @1 :List(Text);
 }
 
 struct NetworkResponse {
