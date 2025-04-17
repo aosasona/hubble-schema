@@ -72,6 +72,16 @@ struct ChunkResult {
 	chunks @0 :List(Text);
 }
 
+struct EntryChunk {
+	id @0 :Int32;
+	entryId @1 :Text;
+	index @2 :Int32;
+	minimumVersion @3 :Int32;
+	content @4 :Text;
+	language @5 :Text;
+	createdAt @6 :Int64;
+}
+
 struct CreateChunkRequest {
 	entryId @0 :Text;
 	index @1 :Int32;
@@ -82,4 +92,8 @@ struct CreateChunkRequest {
 
 struct CreateChunksRequest {
 	chunks @0 :List(CreateChunkRequest);
+}
+
+struct CreateChunksResponse {
+	chunks @0 :List(EntryChunk);
 }
