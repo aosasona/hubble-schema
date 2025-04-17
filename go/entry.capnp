@@ -97,7 +97,3 @@ struct CreateChunkRequest {
 struct CreateChunksRequest {
 	chunks @0 :List(CreateChunkRequest);
 }
-
-struct CreateChunksResponse {
-	chunks @0 :List(EntryChunk);
-}
