@@ -14,6 +14,11 @@ struct StoreSetRequest {
 	value @1 :Text;
 }
 
+struct StoreKvPair {
+	key @0 :Text;
+	value @1 :Text;
+}
+
 struct StoreAllResponse {
-	keys @0 :List(Text);
+	pairs @0 :List(StoreKvPair);
 }
