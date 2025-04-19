@@ -68,7 +68,8 @@ struct Entry {
 struct UpdateEntryRequest {
 	id @0 :Text;
 	name @1 :Text;
-	content @2 :Text;
+	content @2 :Text; # this is the markdown content of the entry, used for rendering
+	text_content @4 :Text; # this is the plain text content of the entry, used for search indexing
 	checksum @3 :Text;
 }
 
