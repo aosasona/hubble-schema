@@ -53,7 +53,8 @@ struct Owner {
 struct Entry {
 	id @0 :Text;
 	name @1 :Text;
-	content @2 :Text;
+	markdown @2 :Text;
+	plainText @11 :Text; # this is the plain text content of the entry, used for search indexing
 	version @3 :Int32;
 	type @4 :Type;
 	collection @5 :Collection;
